@@ -1,0 +1,98 @@
+.noUi-handle {
+    border-radius: 50%;
+}
+.noUi-horizontal {
+    height: 3px;
+}
+.noUi-handle {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+        radial-gradient(57.23% 248.2% at 107.17% 104.02%, rgba(34, 153, 235, 0.92) 0%, rgba(34, 153, 235, 0.07) 100%),
+        radial-gradient(104.22% 230.94% at -4.22% 0%, #24c5db 3.62%, rgba(36, 197, 219, 0.26) 55.1%);
+}
+.noUi-horizontal .noUi-handle {
+    width: 16px;
+    height: 16px;
+    right: -14px;
+    top: -7px;
+}
+.noUi-handle:before,
+.noUi-handle:after {
+    content: none;
+}
+
+.noUi-connect {
+    background: #24c5db;
+}
+
+.noUi-tooltip {
+    display: none;
+}
+.noUi-active .noUi-tooltip {
+    display: block;
+}
+
+.slider {
+    display: flex;
+    flex-direction: column;
+    gap: 49px;
+}
+.slider-wrapper {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 23px;
+}
+.slider__count {
+    position: relative;
+}
+.slider__count::before {
+    position: absolute;
+    top: 13px;
+    left: 2px;
+    content: '1';
+    font-family: Steppe;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    color: #ffffff;
+}
+
+.slider__count::after {
+    position: absolute;
+    top: 13px;
+    right: -12px;
+    content: '12';
+    font-family: Steppe;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    color: #ffffff;
+}
+
+.slider__year::before {
+    position: absolute;
+    top: 13px;
+    left: 2px;
+    content: '1940';
+    font-family: Steppe;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    color: #ffffff;
+}
+
+.slider__year::after {
+    position: absolute;
+    top: 13px;
+    right: -12px;
+    content: '2020';
+    font-family: Steppe;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    color: #ffffff;
+}

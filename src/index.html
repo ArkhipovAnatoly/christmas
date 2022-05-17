@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Neucha&family=Roboto&display=swap" rel="stylesheet" />
+        <title>Christmas</title>
+    </head>
+    <body class="body">
+        <div class="wrapper">
+            <main class="main">
+                <div class="welcome-container">
+                    <section class="welcome">
+                        <h1 class="welcome__title">Помогите бабушке нарядить елку</h1>
+                        <button class="welcome__button">Начать</button>
+                    </section>
+                </div>
+
+                <header class="header">
+                    <div class="header-content">
+                        <nav class="nav">
+                            <a class="logo"></a>
+                            <a href="#" class="toys-switcher active-link">Игрушки</a>
+                            <a href="#" class="tree-switcher">Ёлка</a>
+                        </nav>
+                    </div>
+                </header>
+
+                <div class="toys-page">
+                    <aside class="aside">
+                        <div class="aside__header">
+                            <input
+                                class="aside-header__search"
+                                type="search"
+                                name="search"
+                                id="search"
+                                placeholder="Поиск"
+                                autofocus
+                                autocomplete="off"
+                            />
+                        </div>
+                        <div class="aside__wrapper">
+                            <div class="aside__select">
+                                <label class="select-label" for="select"> Сортировать</label>
+                                <select class="select" name="select" id="select">
+                                    <option class="option" value="title-up" selected>По названию вверх</option>
+                                    <option class="option" value="title-down">По названию вниз</option>
+                                    <option class="option" value="year-up">По году вверх</option>
+                                    <option class="option" value="year-down">По году вниз</option>
+                                </select>
+                            </div>
+                            <div class="shape">
+                                <h2 class="title left-title">Форма</h2>
+                                <div class="shape__item">
+                                    <div class="shape__image">
+                                        <button
+                                            data-filter="колокольчик"
+                                            class="button shape-button bell-button"
+                                        ></button>
+                                        <p class="shape__name">Колокол</p>
+                                    </div>
+                                    <div class="shape__image">
+                                        <button data-filter="шар" class="button shape-button ball-button"></button>
+                                        <p class="shape__name">Шар</p>
+                                    </div>
+                                    <div class="shape__image">
+                                        <button data-filter="шишка" class="button shape-button cone-button"></button>
+                                        <p class="shape__name">Шишка</p>
+                                    </div>
+                                    <div class="shape__image">
+                                        <button
+                                            data-filter="снежинка"
+                                            class="button shape-button snowflake-button"
+                                        ></button>
+                                        <p class="shape__name">Снежинка</p>
+                                    </div>
+                                    <div class="shape__image">
+                                        <button data-filter="фигурка" class="button shape-button toy-button"></button>
+                                        <p class="shape__name">Фигурка</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider">
+                                <div class="slider-wrapper">
+                                    <h2 class="title left-title">Количество экземпляров</h2>
+                                    <div id="slider__count" class="slider__count"></div>
+                                </div>
+                                <div class="slider-wrapper">
+                                    <h2 class="title left-title">Год приобретения</h2>
+                                    <div id="slider__year" class="slider__year"></div>
+                                </div>
+                            </div>
+                            <div class="color">
+                                <h2 class="title left-title">Цвет</h2>
+                                <div class="color__list">
+                                    <label class="color__label">
+                                        <input data-filter="белый" type="checkbox" />
+                                        <span class="checkmark checkmark-white"></span>
+                                    </label>
+
+                                    <label class="color__label">
+                                        <input data-filter="желтый" type="checkbox" />
+                                        <span class="checkmark checkmark-yellow"></span>
+                                    </label>
+
+                                    <label class="color__label">
+                                        <input data-filter="красный" type="checkbox" />
+                                        <span class="checkmark checkmark-red"></span>
+                                    </label>
+
+                                    <label class="color__label">
+                                        <input data-filter="синий" type="checkbox" />
+                                        <span class="checkmark checkmark-blue"></span>
+                                    </label>
+                                    <label class="color__label">
+                                        <input data-filter="зелёный" type="checkbox" />
+                                        <span class="checkmark checkmark-green"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="size">
+                                <h2 class="title left-title">Размер</h2>
+                                <div class="size__list">
+                                    <label class="size__label"
+                                        >Большой
+                                        <input data-filter="большой" type="checkbox" />
+                                        <span class="checkmark-size"></span>
+                                    </label>
+
+                                    <label class="size__label"
+                                        >Средний
+                                        <input data-filter="средний" type="checkbox" />
+                                        <span class="checkmark-size"></span>
+                                    </label>
+
+                                    <label class="size__label"
+                                        >Маленький
+                                        <input data-filter="малый" type="checkbox" />
+                                        <span class="checkmark-size"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="favorite">
+                                <div class="favorite__list">
+                                    <label class="favorite__label">
+                                        <input data-filter="любимый" type="checkbox" />
+                                        <span class="checkmark-favorite"></span>
+                                        Только любимые</label
+                                    >
+                                </div>
+                            </div>
+                            <button class="reset-btn">Сбросить настройки</button>
+                        </div>
+                    </aside>
+
+                    <div class="cards">
+                        <div class="cards__header">
+                            <h2 class="cards__title">Игрушки</h2>
+                            <div class="add"><span class="cards__fav">20</span></div>
+                        </div>
+                        <div class="cards__content">
+                            <div class="error">
+                                <span class="error__text"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="overlay">
+                    <div class="tree-page">
+                        <div class="favorites-menu">
+                            <div class="snow-audio-container menu-container">
+                                <div class="audio-control menu-item"></div>
+                                <div class="snow-control menu-item"></div>
+                            </div>
+                            <div class="tree-container menu-container">
+                                <div class="tree menu-item" data-tree="1"></div>
+                                <div class="tree menu-item" data-tree="2"></div>
+                                <div class="tree menu-item" data-tree="3"></div>
+                                <div class="tree menu-item" data-tree="4"></div>
+                                <div class="tree menu-item" data-tree="5"></div>
+                                <div class="tree menu-item" data-tree="6"></div>
+                            </div>
+                            <div class="bg-container menu-container">
+                                <div class="bg menu-item" data-bg="1"></div>
+                                <div class="bg menu-item" data-bg="2"></div>
+                                <div class="bg menu-item" data-bg="3"></div>
+                                <div class="bg menu-item" data-bg="4"></div>
+                                <div class="bg menu-item" data-bg="5"></div>
+                                <div class="bg menu-item" data-bg="6"></div>
+                                <div class="bg menu-item" data-bg="7"></div>
+                                <div class="bg menu-item" data-bg="8"></div>
+                                <div class="bg menu-item" data-bg="9"></div>
+                                <div class="bg menu-item" data-bg="10"></div>
+                            </div>
+                            <div class="garland-container menu-container">
+                                <div class="garland-btns">
+                                    <button class="color-btn multicolor-btn" data-color="multicolor"></button>
+                                    <button class="color-btn red-btn" data-color="red"></button>
+                                    <button class="color-btn blue-btn" data-color="blue"></button>
+                                    <button class="color-btn yellow-btn" data-color="yellow"></button>
+                                    <button class="color-btn green-btn" data-color="green"></button>
+                                </div>
+                                <div class="onoffswitch">
+                                    <input
+                                        type="checkbox"
+                                        name="onoffswitch"
+                                        class="onoffswitch-checkbox"
+                                        id="myonoffswitch"
+                                    />
+                                    <label class="onoffswitch-label" for="myonoffswitch">
+                                        <div class="onoffswitch-inner"></div>
+                                        <div class="onoffswitch-switch"></div>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-tree-container">
+                            <div class="snowflakes hide">
+                                <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i
+                                ><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i
+                                ><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i
+                                ><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i
+                                ><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i
+                                ><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i
+                                ><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i
+                                ><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i
+                                ><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i
+                                ><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i
+                                ><i></i><i></i><i></i><i></i><i></i>
+                            </div>
+                            <div class="garland-tree-container"></div>
+                            <map name="tree-map" id="map">
+                                <area
+                                    class="area"
+                                    coords="178,707,98,679,63,644,26,611,5,554,12,446,64,347,105,321,100,276,97,212,154,123,192,69,219,3,272,6,292,49,311,71,318,117,359,133,406,222,404,292,433,363,459,448,500,555,450,674,365,709"
+                                    shape="poly"
+                                    alt="tree"
+                                />
+                            </map>
+
+                            <img src="assets/tree/1.png" class="main-tree" usemap="#tree-map" alt="tree" />
+                        </div>
+                        <div class="favorites-aside">
+                            <div class="favorites-container"></div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <footer class="footer">
+                <a class="footer__link" href="https://github.com/ArkhipovAnatoly">Done by Arkhipov Anatoly</a>
+                <a class="footer__link" href="https://rs.school/js/">
+                    <img class="image" src="assets/svg/rss.svg" alt="rsschool" />
+                </a>
+            </footer>
+        </div>
+    </body>
+</html>
